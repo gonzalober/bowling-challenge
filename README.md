@@ -73,3 +73,12 @@ In code review we'll be hoping to see:
 * The code is elegant: every class has a clear responsibility, methods are short etc.
 
 Reviewers will potentially be using this [code review rubric](docs/review.md).  Note that referring to this rubric in advance may make the challenge somewhat easier.  You should be the judge of how much challenge you want.
+
+
+Objects:
+- Player(only 2)
+- Game
+    - Frame (max 10 per game)
+        - shots (2max, frame number 10-3 shots max)
+
+![alt text](images/gon.png)
