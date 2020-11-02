@@ -2,8 +2,8 @@ require_relative "./../models/framesscore.rb"
 
 class ScoreCard < Sinatra::Base
   set :root, File.dirname(File.expand_path("..", __FILE__))
-  session :enable
-  
+  enable :sessions
+
   get '/' do
     erb :index
   end
@@ -11,13 +11,14 @@ class ScoreCard < Sinatra::Base
   post '/players'do
     p '-----------'
     p params["score"]
-    @scores = FrameScoreModel.new(params["score"])
+    @scores = []
+    @scores = FrameScoreModel.new.frame(params["score"])
     p @scores
     erb :scorecard
   end
 
   get '/players/new' do
-
+    @player_1_name = params[:player_1_name]
     erb :'players/new'
   end
 

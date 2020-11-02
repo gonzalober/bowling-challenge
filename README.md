@@ -76,7 +76,7 @@ Reviewers will potentially be using this [code review rubric](docs/review.md).  
 
 
 Objects:
-- Player(only 2)
+- Player(only 1)
 - Game
     - Frame (max 10 per game)
         - shots (2max, frame number 10-3 shots max)

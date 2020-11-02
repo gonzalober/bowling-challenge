@@ -1,5 +1,6 @@
-<ul>
-  <% @scores.each do |score| %>
-  <%= p score %>
-  <% end %>
-</ul>
+<%= @scores %>
+<form action='/players' method='post'>
+  Input your score <%=@player_1_name%>:<br>
+  <input type="number" name="score"  min="0" max="30"><br>
+  <input class="submit"type='submit' name='Submit' value='Submit'>
+</form>
